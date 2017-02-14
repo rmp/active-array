@@ -7,6 +7,7 @@ let x = new ActiveArray(callback, countThreshold, timeCountThreshold, intervalMi
 
 x.push(object);
 console.log(x.length);
+```
 
 ## Example: ##
 
@@ -25,3 +26,4 @@ setInterval(function () {
     let id = Math.floor(Math.random()*max);
     x[id].push("m"); // consume message from sqs and store here:
 }, 1);
+```
