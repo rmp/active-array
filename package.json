@@ -1,0 +1,15 @@
+{
+  "name": "active-array",
+  "version": "0.0.1",
+  "maintainers": [
+    {
+      "name": "Roger Pettett",
+      "email": "rmp@psyphi.net"
+    }
+  ],
+  "keywords": [
+    "array",
+    "queue",
+    "timer"
+  ]
+}
