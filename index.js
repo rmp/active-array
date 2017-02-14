@@ -1,6 +1,5 @@
-function ActiveArray (id, fire, countThreshold, timeCountThreshold, timeThreshold) {
+function ActiveArray (fire, countThreshold, timeCountThreshold, timeThreshold) {
   let that    = this;
-  that.id     = id;
   that.list   = new Array();
   that.timer  = null;
   that.fire   = fire;
@@ -11,7 +10,7 @@ function ActiveArray (id, fire, countThreshold, timeCountThreshold, timeThreshol
   that.timeThreshold      = timeThreshold;      // period, milliseconds. Should account for the time the analysis process takes
 
   if(timeThreshold) {
-    that.timer              = global.setInterval(function (arg) { that.trigger(arg) }, that.timeThreshold, "timer");
+    that.timer = global.setInterval(function (arg) { that.trigger(arg) }, that.timeThreshold, "timer");
   }
 
   return 1;
@@ -24,7 +23,7 @@ ActiveArray.prototype.trigger = function (why) {
     return;
   }
 
-  that.fire(why, that.list);
+  that.fire(that.list, why);
   that.list   = new Array();
   that.length = 0;
 };
