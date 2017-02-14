@@ -1,4 +1,4 @@
-# ActiveQueue #
+# ActiveArray #
 
 An array which fires a callback when either a count of items is reached, or an interval fires and a minimum count is present.
 
